@@ -26,7 +26,8 @@ import org.javacord.api.listener.GloballyAttachableListener;
  * @author Taubsie
  * @since 1.0.0
  */
-public interface Bot extends Implementation {
+public interface Bot extends Implementation
+{
     void stop();
 
     void restart();
@@ -35,7 +36,6 @@ public interface Bot extends Implementation {
 
     void reloadConfig();
 
-    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     boolean isEnabled();
 
     boolean isConnected();
