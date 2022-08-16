@@ -16,7 +16,7 @@
 package de.kissenpvp.discord.api;
 
 import de.kissenpvp.api.base.Implementation;
-import de.kissenpvp.api.base.module.Module;
+import de.kissenpvp.api.base.module.ModuleData;
 import de.kissenpvp.discord.api.command.SlashCommandDescription;
 import org.javacord.api.entity.server.Server;
 import org.javacord.api.listener.GloballyAttachableListener;
@@ -27,7 +27,7 @@ import org.javacord.api.listener.GloballyAttachableListener;
  * @author Taubsie
  * @since 1.0.0
  */
-@Module(name = "DiscordBot", author = "Taubsie", version = "1.0.0", path = "de.kissenpvp")
+@ModuleData(name = "DiscordBot", author = "Taubsie", version = "1.0.0", path = "de.kissenpvp")
 public interface Bot extends Implementation
 {
     void stop();
