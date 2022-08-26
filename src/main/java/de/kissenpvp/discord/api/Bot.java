@@ -18,8 +18,11 @@ package de.kissenpvp.discord.api;
 import de.kissenpvp.api.base.Implementation;
 import de.kissenpvp.api.base.module.ModuleData;
 import de.kissenpvp.discord.api.command.SlashCommandDescription;
+import org.javacord.api.entity.channel.Channel;
 import org.javacord.api.entity.server.Server;
+import org.javacord.api.entity.user.User;
 import org.javacord.api.listener.GloballyAttachableListener;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Main class for the best discord-bot that exists in the universe north-west of New Hanover at least.
@@ -42,9 +45,15 @@ public interface Bot extends Implementation
 
     boolean isConnected();
 
-    Server getServer();
+    @Nullable Server getServer();
 
     void registerListener(GloballyAttachableListener globallyAttachableListener);
 
     void addCommand(SlashCommandDescription slashCommandDescription);
+
+    @Nullable User getMember(long id);
+
+    long getBotId();
+
+    @Nullable Channel getAppealChannel();
 }
