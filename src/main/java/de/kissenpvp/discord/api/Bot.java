@@ -18,7 +18,7 @@ package de.kissenpvp.discord.api;
 import de.kissenpvp.api.base.Implementation;
 import de.kissenpvp.api.base.module.ModuleData;
 import de.kissenpvp.discord.api.command.SlashCommandDescription;
-import org.javacord.api.entity.channel.Channel;
+import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.server.Server;
 import org.javacord.api.entity.user.User;
 import org.javacord.api.listener.GloballyAttachableListener;
@@ -55,5 +55,5 @@ public interface Bot extends Implementation
 
     long getBotId();
 
-    @Nullable Channel getAppealChannel();
+    @Nullable TextChannel getAppealChannel();
 }
